@@ -63,7 +63,7 @@ html, body {
 }
 
 @scriptFont: 'Dancing Script', cursive;
-@bodyFont: 'Quicksand', sans-serif;
+@bodyFont: 'Quicksand', sans-serif;//variables
 
 .sideLinks {
   font-family: @scriptFont;
@@ -73,7 +73,7 @@ html, body {
   padding-left: 12px;
   font-size: 1.6rem;
   text-decoration: none;
-}
+}//mixin
 
 .gridRowAlign(@value, @value2) {
   grid-row-start: @value;
@@ -83,13 +83,13 @@ html, body {
 .gridColAlign(@value, @value2) {
   grid-column-start: @value;
   grid-column-end: @value2;
-}
+}//parametric mixin
 
 .h1Props {
   font-family: @scriptFont;
   font-weight: 600;
   font-size: 2.5rem;
-}
+}//mixin
 
 .sidebarLinks {
   width: 12%;
@@ -111,11 +111,14 @@ html, body {
   height: 1491px;  
   width: 88%;
   font-size: 1.6rem;
-  border: 1px solid black;
+  border: 1px solid rgb(48, 25, 25);
   background: #d8edcb;
   display: grid;
   grid-template-columns: 20% 20% 20% 20% 20%;
-  grid-template-rows: 1fr 1fr 1fr 1fr 600px;
+  grid-template-rows: 1fr 1fr 1fr 1fr 1fr 600px;
+  // @media (max-width: 800px) {
+  //   grid-template-columns: 1fr 1fr 1fr 1fr 
+  // }
 }
 
 .container .basicInfo {
@@ -183,7 +186,7 @@ html, body {
 
 .img2Hold {
   .gridColAlign(1,4);
-  .gridRowAlign(4,5);
+  .gridRowAlign(3,5);
   display: flex;
   flex-direction: column;
   img {
@@ -199,36 +202,9 @@ html, body {
   }
 }
 
-.wHistory {	
+.workHistory {
+  border: 1px solid black;
+  background: red;
   .gridRowAlign(5,7);
   .gridColAlign(1,6);
-  h1 {
-    height: 30px;
-    text-align: center;
-    .h1Props();
-  }
-  .wHistFlex {
-	display: flex;
-	margin-top: 40px;
-    .leftColWH {  
-    width: 50%;
-      h2 {
-      font-weight: bold;
-        span{
-          font-weight: 100;
-          border-bottom: 1px dashed black;
-        }
-      }
-    }
-    .rightColWH {
-      width: 50%;f
-      h2 {
-      font-weight: bold;
-        span{
-          font-weight: 100;
-          border-bottom: 1px dashed black;
-        }
-      }
-    }
-  }
 }
