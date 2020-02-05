@@ -1,1 +1,314 @@
 /* Compile your LESS file! */
+/* // Is this working? */
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol,
+ul {
+  list-style: none;
+}
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: '';
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+/* Set every element's box-sizing to border-box */
+* {
+  box-sizing: border-box;
+}
+html,
+body {
+  height: 100%;
+  font-family: 'Quicksand', sans-serif;
+  font-size: 62.5%;
+  display: flex;
+  line-height: 1.2;
+}
+.sideLinks {
+  font-family: 'Dancing Script', cursive;
+  font-weight: 700;
+  color: #2e0b3d;
+  margin: 50px 0 0 0;
+  padding-left: 12px;
+  font-size: 1.6rem;
+  text-decoration: none;
+}
+.h1Props {
+  font-family: 'Dancing Script', cursive;
+  font-weight: 600;
+  font-size: 2.5rem;
+}
+.sidebarLinks {
+  width: 12%;
+  height: 1491px;
+  border: 1px solid black;
+  background-color: #4bc165;
+}
+.sidebarLinks nav {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+.sidebarLinks nav a {
+  font-family: 'Dancing Script', cursive;
+  font-weight: 700;
+  color: #2e0b3d;
+  margin: 50px 0 0 0;
+  padding-left: 12px;
+  font-size: 1.6rem;
+  text-decoration: none;
+}
+.container {
+  height: 1491px;
+  width: 88%;
+  font-size: 1.6rem;
+  border: 1px solid black;
+  background: #d8edcb;
+  display: grid;
+  grid-template-columns: 20% 20% 20% 20% 20%;
+  grid-template-rows: 1fr 1fr 1fr 1fr 600px;
+}
+.container .basicInfo {
+  border: 1px dashed #4b4c4b;
+  border-bottom-right-radius: 15px;
+  padding: 20px 0 0 20px;
+  grid-column-start: 1;
+  grid-column-end: 3;
+  grid-row-start: 1;
+  grid-row-end: 2;
+}
+.container .basicInfo h1 {
+  font-weight: 600;
+}
+.container .imgHold {
+  grid-column-start: 4;
+  grid-column-end: 6;
+  grid-row-start: 1;
+  grid-row-end: 3;
+}
+.container .imgHold img {
+  border-bottom-left-radius: 20px;
+  width: 100%;
+  height: 100%;
+}
+.container .introduction {
+  padding-left: 20px;
+  grid-column-start: 1;
+  grid-column-end: 3;
+  grid-row-start: 2;
+  grid-row-end: 3;
+  display: flex;
+  align-items: flex-end;
+}
+.container .introduction h1 {
+  font-family: 'Dancing Script', cursive;
+  font-weight: 600;
+  font-size: 2.5rem;
+  border-bottom: 3px solid #4b4c4b;
+  line-height: 1.5;
+}
+.introPara {
+  margin-right: 30px;
+  padding-top: 15px;
+  grid-row-start: 3;
+  grid-row-end: 4;
+  grid-column-start: 1;
+  grid-column-end: 4;
+}
+.introPara p {
+  text-indent: 25px;
+}
+.skillPortion {
+  border: 1px solid black;
+  border-top-left-radius: 15px;
+  border-bottom-left-radius: 15px;
+  grid-column-start: 4;
+  grid-column-end: 6;
+  grid-row-start: 3;
+  grid-row-end: 5;
+}
+.skillPortion h1 {
+  height: 10%;
+  text-align: center;
+  font-family: 'Dancing Script', cursive;
+  font-weight: 600;
+  font-size: 2.5rem;
+}
+.skillPortion ul {
+  height: 90%;
+  list-style-type: disc;
+  margin-left: 22px;
+}
+.img2Hold {
+  grid-column-start: 1;
+  grid-column-end: 4;
+  grid-row-start: 4;
+  grid-row-end: 5;
+  display: flex;
+  flex-direction: column;
+}
+.img2Hold img {
+  border-radius: 15px;
+  opacity: 0.3;
+  width: 90%;
+  height: 80%;
+}
+.img2Hold a {
+  height: 10%;
+  align-self: flex-start;
+  opacity: 0.05;
+}
+.wHistory {
+  grid-row-start: 5;
+  grid-row-end: 7;
+  grid-column-start: 1;
+  grid-column-end: 6;
+}
+.wHistory h1 {
+  height: 30px;
+  text-align: center;
+  font-family: 'Dancing Script', cursive;
+  font-weight: 600;
+  font-size: 2.5rem;
+}
+.wHistory .wHistFlex {
+  display: flex;
+  margin-top: 40px;
+}
+.wHistory .wHistFlex .leftColWH {
+  width: 50%;
+}
+.wHistory .wHistFlex .leftColWH h2 {
+  font-weight: bold;
+}
+.wHistory .wHistFlex .leftColWH h2 span {
+  font-weight: 100;
+  border-bottom: 1px dashed black;
+}
+.wHistory .wHistFlex .rightColWH {
+  width: 50%;
+}
+.wHistory .wHistFlex .rightColWH f h2 {
+  font-weight: bold;
+}
+.wHistory .wHistFlex .rightColWH f h2 span {
+  font-weight: 100;
+  border-bottom: 1px dashed black;
+}
