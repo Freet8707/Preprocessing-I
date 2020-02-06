@@ -165,10 +165,11 @@ html, body {
   }
 }
 
-.introPara {
+.container .introPara {
   margin-right: 30px;
   padding-top: 15px;
-  .gridRowAlign(3,4);
+  height: 100%;
+  .gridRowAlign(3,5);
   .gridColAlign(1,4);
   @media (max-width: 750px) {
     .gridRowAlign(2,3);
@@ -182,7 +183,7 @@ html, body {
   }
 }
 
-.skillPortion {
+.container .skillPortion {
   border: 1px solid black;
   border-top-left-radius: 15px;
   border-bottom-left-radius: 15px;
@@ -206,28 +207,22 @@ html, body {
   }
 }
 
-.img2Hold {
+.container .img2Hold {
   .gridColAlign(1,4);
   .gridRowAlign(4,5);
-  display: flex;
-  flex-direction: column;
   @media (max-width: 750px) {
     display: none;   
   }
   img {
     border-radius: 15px;
     opacity: .3;
-    width: 90%;
-    height: 80%;
-  }
-  a {
-    height: 10%;
-    align-self: flex-start;
-    opacity: .05;
+    float: right;
+    width: 75%;
+    max-height: 100%;
   }
 }
 
-.wHistory {	
+.container .wHistory {	
   .gridRowAlign(5,7);
   .gridColAlign(1,6);
   @media (max-width: 750px) {
