@@ -83,7 +83,7 @@ html, body {
 .gridColAlign(@value, @value2) {
   grid-column-start: @value;
   grid-column-end: @value2;
-}//parametric mixin
+}//parametric mixins
 
 .h1Props {
   font-family: @scriptFont;
@@ -111,14 +111,16 @@ html, body {
   height: 1491px;  
   width: 88%;
   font-size: 1.6rem;
-  border: 1px solid rgb(48, 25, 25);
+  border: 1px solid black;
   background: #d8edcb;
   display: grid;
   grid-template-columns: 20% 20% 20% 20% 20%;
   grid-template-rows: 1fr 1fr 1fr 1fr 1fr 600px;
-  // @media (max-width: 800px) {
-  //   grid-template-columns: 1fr 1fr 1fr 1fr 
-  // }
+  @media (max-width: 750px) {
+    .imgHold {
+      display: none;
+    }
+  }
 }
 
 .container .basicInfo {
@@ -186,7 +188,7 @@ html, body {
 
 .img2Hold {
   .gridColAlign(1,4);
-  .gridRowAlign(3,5);
+  .gridRowAlign(4,5);
   display: flex;
   flex-direction: column;
   img {
@@ -202,9 +204,36 @@ html, body {
   }
 }
 
-.workHistory {
-  border: 1px solid black;
-  background: red;
+.wHistory {	
   .gridRowAlign(5,7);
   .gridColAlign(1,6);
+  h1 {
+    height: 30px;
+    text-align: center;
+    .h1Props();
+  }
+  .wHistFlex {
+	display: flex;
+	margin-top: 40px;
+    .leftColWH {  
+    width: 50%;
+      h2 {
+      font-weight: bold;
+        span{
+          font-weight: 100;
+          border-bottom: 1px dashed black;
+        }
+      }
+    }
+    .rightColWH {
+      width: 50%;
+      h2 {
+      font-weight: bold;
+        span{
+          font-weight: 100;
+          border-bottom: 1px dashed black;
+        }
+      }
+    }
+  }
 }

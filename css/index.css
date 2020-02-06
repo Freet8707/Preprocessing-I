@@ -179,11 +179,16 @@ body {
   height: 1491px;
   width: 88%;
   font-size: 1.6rem;
-  border: 1px solid #301919;
+  border: 1px solid black;
   background: #d8edcb;
   display: grid;
   grid-template-columns: 20% 20% 20% 20% 20%;
   grid-template-rows: 1fr 1fr 1fr 1fr 1fr 600px;
+}
+@media (max-width: 750px) {
+  .container .imgHold {
+    display: none;
+  }
 }
 .container .basicInfo {
   border: 1px dashed #4b4c4b;
@@ -259,7 +264,7 @@ body {
 .img2Hold {
   grid-column-start: 1;
   grid-column-end: 4;
-  grid-row-start: 3;
+  grid-row-start: 4;
   grid-row-end: 5;
   display: flex;
   flex-direction: column;
@@ -275,11 +280,40 @@ body {
   align-self: flex-start;
   opacity: 0.05;
 }
-.workHistory {
-  border: 1px solid black;
-  background: red;
+.wHistory {
   grid-row-start: 5;
   grid-row-end: 7;
   grid-column-start: 1;
   grid-column-end: 6;
+}
+.wHistory h1 {
+  height: 30px;
+  text-align: center;
+  font-family: 'Dancing Script', cursive;
+  font-weight: 600;
+  font-size: 2.5rem;
+}
+.wHistory .wHistFlex {
+  display: flex;
+  margin-top: 40px;
+}
+.wHistory .wHistFlex .leftColWH {
+  width: 50%;
+}
+.wHistory .wHistFlex .leftColWH h2 {
+  font-weight: bold;
+}
+.wHistory .wHistFlex .leftColWH h2 span {
+  font-weight: 100;
+  border-bottom: 1px dashed black;
+}
+.wHistory .wHistFlex .rightColWH {
+  width: 50%;
+}
+.wHistory .wHistFlex .rightColWH h2 {
+  font-weight: bold;
+}
+.wHistory .wHistFlex .rightColWH h2 span {
+  font-weight: 100;
+  border-bottom: 1px dashed black;
 }
